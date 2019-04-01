@@ -1,0 +1,27 @@
+create schema musicbrainz;
+set search_path to musicbrainz;
+
+\i C:/CS327E/while-true/final-project/create_area.sql; 
+\i C:/CS327E/while-true/final-project/create_area_alias.sql;
+\i C:/CS327E/while-true/final-project/create_area_alias_type.sql;
+\i C:/CS327E/while-true/final-project/create_area_type.sql;
+\i C:/CS327E/while-true/final-project/create_artist.sql;
+\i C:/CS327E/while-true/final-project/create_artist_alias.sql;
+\i C:/CS327E/while-true/final-project/create_artist_alias_type.sql;
+\i C:/CS327E/while-true/final-project/create_artist_credit.sql;
+\i C:/CS327E/while-true/final-project/create_artist_credit_name.sql;
+\i C:/CS327E/while-true/final-project/create_artist_type.sql;
+\i C:/CS327E/while-true/final-project/create_country_area.sql;
+\i C:/CS327E/while-true/final-project/create_gender.sql;
+\i C:/CS327E/while-true/final-project/create_label.sql;
+\i C:/CS327E/while-true/final-project/create_label_type.sql;
+\i C:/CS327E/while-true/final-project/create_medium.sql;
+\i C:/CS327E/while-true/final-project/create_place.sql;
+\i C:/CS327E/while-true/final-project/create_place_alias.sql;
+\i C:/CS327E/while-true/final-project/create_place_alias_type.sql;
+\i C:/CS327E/while-true/final-project/create_place_type.sql;
+\i C:/CS327E/while-true/final-project/create_recording.sql;
+\i C:/CS327E/while-true/final-project/create_release.sql;
+\i C:/CS327E/while-true/final-project/create_release_country.sql;
+\i C:/CS327E/while-true/final-project/create_release_label.sql;
+\i C:/CS327E/while-true/final-project/create_track.sql;

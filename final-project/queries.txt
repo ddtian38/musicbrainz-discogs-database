@@ -1,0 +1,12 @@
+Queries.txt
+
+1. How many artists from either dataset have the first name John?
+2. What are the genres of 50 random artists having at least 50 releases from either dataset?
+3. How many releases are there in each genre?
+4. Which countries(top 20) in musicbrainz have the most labels?
+5. Which label in discog has the most releases?
+6. In the Discog dataset, what are the top genres?
+7. What are the top countries with the most releases?
+8. What are the top cities with the most performances?
+9. What are the top artists with the most tracks in the classical genre?
+10. How many types of artists are there in the United States?

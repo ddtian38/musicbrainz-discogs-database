@@ -1,0 +1,96 @@
+dev=# select * from discog.artists order by random() limit 10;
+ tist_id |        name        |          realname
+---------+--------------------+----------------------------
+ 1229079 | Kurt Weil (2)      | Kurt Weil (2)
+  805574 | Hiroya Takayama    | Θ½Öσ▒▒µ╡⌐Σ╣ƒ (Hiroya Takayama)
+ 1176715 | Little Miss Gunner | Little Miss Gunner
+  774157 | John De Bono       | John De Bono
+  347405 | Cosmic Rockerz     | Cosmic Rockerz
+  130167 | Monkey Boy         | Monkey Boy
+ 1302626 | Groovy Boyfriends  | Groovy Boyfriends
+   55732 | DJ Red Handed      | Juan Cordova
+   11021 | DJ Additive        | Aaron Coats
+  555816 | Steve Osso         | Steve Osso
+  
+dev=# select * from discog.genres order by random() limit 10;
+ genre_id |       name
+----------+------------------
+        2 | Jazz
+       14 | Children's
+        5 | Funk / Soul
+       15 | Brass & Military
+        4 | Latin
+        1 | Electronic
+        7 | Non-Music
+       12 | Classical
+        3 | Rock
+        6 | Stage & Screen
+
+dev=# select * from discog.labels order by random() limit 10;
+ label_id |              name
+----------+--------------------------------
+   149813 | West Records (6)
+  1039703 | Not On Label (Jaguar Pyramids)
+  1170264 | Pon's Automobielhanel
+   669273 | Suck My Dee
+   603191 | Moonlight Tango Cafe
+   687963 | United Nation Publishing
+   300957 | Troutman Sound Labs
+    67004 | M Beat Records
+   266244 | Sonora Sound Studio
+  1030080 | Zero Defects
+ 
+ dev=# select * from discog.releases order by random() limit 10;
+ release_id |             title             | num_tracks |  released  |    country
+------------+-------------------------------+------------+------------+----------------
+    1973217 | Careless Thoughts             |          4 | 1998       | Czech Republic
+    1072832 | The Ballroom                  |         12 | 1995       | Mexico
+    1688904 | Adventure  48                 |         11 | 9/21/2000  | Japan
+    1458414 | Rock The House                |          9 | 1988       | Germany
+    1804945 | M6 Dance N┬░13                 |         20 | 1998       | France
+    1349335 | The Ins & Outs Of Terrorism!  |          6 | 1997       | US
+     758092 | In The House                  |          6 | 1995       | Germany
+    1297997 | Sting In The Tail / The Break |          2 | 2008       | UK
+    1891125 | When It Was Done              |         11 | 1969       | US
+    1689403 | Fragments Of Thoughts         |         13 | 2009-03-00 | US
+	
+dev=# select * from discog.releases_artists order by random() limit 10;
+ release_id | artist_id
+------------+-----------
+     383872 |    253271
+    9492081 |     69866
+    3978020 |    488554
+    4249014 |    311744
+    9126339 |    961400
+      93927 |    253504
+    8050133 |    262801
+    1649039 |     10438
+    6800983 |     22334
+    7127925 |    832661
+	
+dev=# select * from discog.releases_labels order by random() limit 10;
+ release_id | label_id
+------------+----------
+    6797903 |    25487
+     170690 |      766
+    5309313 |    40181
+    9096860 |   688069
+    1922505 |    50952
+    3473144 |     5810
+     455198 |     8377
+     392726 |   882301
+    1293714 |     5129
+
+dev=# select * from discog.releases_labels order by random() limit 10;
+ release_id | label_id
+------------+----------
+    6797903 |    25487
+     170690 |      766
+    5309313 |    40181
+    9096860 |   688069
+    1922505 |    50952
+    3473144 |     5810
+     455198 |     8377
+     392726 |   882301
+    1293714 |     5129
+	

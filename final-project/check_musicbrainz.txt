@@ -1,0 +1,320 @@
+dev=# select * from musicbrainz.area order by random() limit 10;
+
+   id   |                 gid                  |       name        | type | edits_pending |        last_updated        | begin_date_year | begin_date_month | begin_date_day | end_date_year | end_date_month | end_date_day | ended | comment
+--------+--------------------------------------+-------------------+------+---------------+----------------------------+-----------------+------------------+----------------+---------------+----------------+--------------+-------+---------
+  88024 | 9d9d2f21-a6b0-45e9-8de1-b2ad4586eb6b | Kanpur            |    3 |             0 | 2013-12-15 13:02:14.290629 |                 |                  |                |               |                |              | f     |
+  76925 | f32a42c9-5e21-4de4-9a2e-513b5b384c8c | Sonderhofen       |    4 |             0 | 2013-11-24 05:01:44.646063 |                 |                  |                |               |                |              | f     |
+ 115904 | 5a246006-9f73-4e85-a6aa-52938128ca75 | Arlington Heights |    3 |             0 | 2015-12-11 17:04:56.045034 |                 |                  |                |               |                |              | f     |
+  59323 | f4206570-10b2-4217-b229-9d2470e39df1 | Mar+ôuil           |    3 |             0 | 2013-10-30 07:18:59.413197 |                 |                  |                |               |                |              | f     |
+  67552 | 085fd4b1-25e4-4d64-b8d4-7ad329f676d1 | Coulonges-Cohan   |    3 |             0 | 2013-11-06 09:08:56.642774 |                 |                  |                |               |                |              | f     |
+   6312 | aa0747fe-ae1e-4a9f-9d3d-419c7209012e | C+¦rdoba           |    3 |             0 | 2013-11-01 10:19:31.298999 |                 |                  |                |               |                |              | f     |
+  56568 | e29537e9-5b4f-409f-b869-ac5add90f51d | Roquepine         |    3 |             0 | 2013-10-29 14:15:43.98016  |                 |                  |                |               |                |              | f     |
+  61231 | d470af7e-1e69-4f4c-808c-4c5d110c26fd | Cheniers          |    3 |             0 | 2013-10-31 05:18:36.005793 |                 |                  |                |               |                |              | f     |
+  92457 | 6e26de0e-b5ac-4194-b28d-add17d725a84 | Brunary           |    3 |             0 | 2014-03-28 03:18:44.87396  |                 |                  |                |               |                |              | f     |
+  70032 | 59399117-8ce5-4a6b-9eaf-15d747bf295a | Troisdorf         |    3 |             0 | 2013-11-24 09:24:45.178432 |                 |                  |                |               |                |              | f     |
+(10 rows)
+
+dev=# select * from musicbrainz.area_alias order by random() limit 10;
+  id   | area  |            name            | locale | edits_pending |        last_updated        | type |         sort_name          | begin_date_year | begin_date_month | begin_date_day | end_date_year | end_date_month | end_date_day | primary_for_locale | ended
+-------+-------+----------------------------+--------+---------------+----------------------------+------+----------------------------+-----------------+------------------+----------------+---------------+----------------+--------------+--------------------+-------
+ 35078 | 77648 | Benz                       | en     |             0 | 2013-11-21 14:04:03.445285 |    1 | Benz                       |                 |                  |                |               |                |              | t                  | f
+ 52387 | 74172 | Reichenberg                | de     |             0 | 2013-11-23 21:53:05.737286 |    1 | Reichenberg                |                 |                  |                |               |                |              | t                  | f
+ 23761 | 10785 | µ£¿µ¦Ñs+¥s+é                   | ja     |             0 | 2013-11-03 13:16:42.460024 |    1 | µ£¿µ¦Ñs+¥s+é                   |                 |                  |                |               |                |              | t                  | f
+ 45781 |  9639 | Laichingen                 | de     |             0 | 2013-11-22 16:16:23.122828 |    1 | Laichingen                 |                 |                  |                |               |                |              | t                  | f
+ 36490 | 78767 | B+¦hlen                     | de     |             0 | 2013-11-21 17:37:33.127032 |    1 | B+¦hlen                     |                 |                  |                |               |                |              | t                  | f
+ 53385 |  7675 | R++desheim am Rhein         | en     |             0 | 2013-11-24 00:39:02.293894 |    1 | R++desheim am Rhein         |                 |                  |                |               |                |              | t                  | f
+  5460 |  3880 | pâûpâ¡pâápâ¬pâ+pâ+pâ¡pâ¦pâëpâ¦të¦sêÑsî¦ | ja     |             0 | 2013-06-05 06:08:24.000382 |    1 | pâûpâ¡pâápâ¬pâ+pâ+pâ¡pâ¦pâëpâ¦të¦sêÑsî¦ |                 |                  |                |               |                |              | t                  | f
+ 56743 | 78199 | Toddin                     | en     |             0 | 2013-11-24 08:54:40.407313 |    1 | Toddin                     |                 |                  |                |               |                |              | t                  | f
+ 36386 | 74838 | Burgstetten                | en     |             0 | 2013-11-21 17:20:47.924941 |    1 | Burgstetten                |                 |                  |                |               |                |              | t                  | f
+ 34446 | 71361 | Bad Bederkesa              | de     |             0 | 2013-11-21 12:29:25.358054 |    1 | Bad Bederkesa              |                 |                  |                |               |                |              | t                  | f
+(10 rows)
+
+dev=# select * from musicbrainz.area_alias_type order by random() limit 10;
+ id |    name     | parent | child_order | description |                 gid
+----+-------------+--------+-------------+-------------+--------------------------------------
+  3 | Search hint |        |           0 |             | 7090dd35-e32e-3422-8a48-224821c2468b
+  2 | Formal name |        |           0 |             | b280c712-f676-342e-a8f2-e5c5fe0159b4
+  1 | Area name   |        |           0 |             | 0b5b3497-d5d9-34e7-a61b-9a6c18aa7b29
+(3 rows)
+
+dev=# select * from musicbrainz.area_type order by random() limit 10;
+ id |     name     | parent | child_order |                                                                                                                       description                                                                                                                       |                 gid
+----+--------------+--------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------
+  6 | Island       |        |           6 | Island is used for islands and atolls which don't form subdivisions of their own, e.g. Skye. These are not considered when displaying the parent areas for a given area.                                                                                | 3f8e7b66-058b-369b-9834-ffa5fcba5641
+  7 | County       |        |           7 | County is used for smaller administrative divisions of a country which are not the main administrative divisions but are also not municipalities, e.g. counties in the USA. These are not considered when displaying the parent areas for a given area. | bcecec27-8bdb-3e00-8254-d948dda502fa
+  4 | Municipality |        |           4 | Municipality is used for small administrative divisions which, for urban municipalities, often contain a single city and a few surrounding villages. Rural municipalities typically group several villages together.                                    | 17246454-5ac4-36a1-b81a-4753eb2dab20
+  5 | District     |        |           5 | District is used for a division of a large city, e.g. Queens.                                                                                                                                                                                           | 84039871-5e47-38ca-a66a-45e512c8290f
+  1 | Country      |        |           1 | Country is used for areas included (or previously included) in ISO 3166-1, e.g. United States.                                                                                                                                                          | 06dd0ae4-8c74-30bb-b43d-95dcedf961de
+  2 | Subdivision  |        |           2 | Subdivision is used for the main administrative divisions of a country, e.g. California, Ontario, Okinawa. These are considered when displaying the parent areas for a given area.                                                                      | fd3d44c5-80a1-3842-9745-2c4972d35afa
+  3 | City         |        |           3 | City is used for settlements of any size, including towns and villages.                                                                                                                                                                                 | 6fd8f29a-3d0a-32fc-980d-ea697b69da78
+(7 rows)
+
+dev=# select * from musicbrainz.artist order by random() limit 10;
+   id    |                 gid                  |             name              |              sort_name              | begin_date_year | begin_date_month | begin_date_day | end_date_year | end_date_month | end_date_day | type | area | gender |               comment               | edits_pending |        last_updated        | ended | begin_area | end_area
+---------+--------------------------------------+-------------------------------+-------------------------------------+-----------------+------------------+----------------+---------------+----------------+--------------+------+------+--------+-------------------------------------+---------------+----------------------------+-------+------------+----------
+  131884 | bc08f015-b161-48ae-8d60-25b3dd6083b8 | DJ Spice                      | Spice, DJ                           |                 |                  |                |               |                |              |    1 | 222  | 1      | US breakbeat producer Jeff Alderson |             0 | 2011-08-29 10:36:36.462507 | f     |            |
+  443188 | 3eae5be7-f159-40e2-973d-95c94335d277 | Franz Grundheber              | Grundheber, Franz                   | 1937            | 9                | 27             |               |                |              |    1 | 14   | 1      |                                     |             0 | 2016-03-25 22:00:59.235715 | f     |            |
+  933581 | 88c99da7-0588-4c59-a6ef-9f4ddf388959 | Willemsen                     | Willemsen                           |                 |                  |                |               |                |              |    1 |      |        | "one hundred words"                 |             0 | 2012-10-13 13:55:14.657706 | f     |            |
+ 1224992 | 48f0bc48-7d59-4ba6-a183-ea1849d9ac6d | Chiara Castello               | Castello, Chiara                    |                 |                  |                |               |                |              |    1 |      | 2      |                                     |             0 | 2015-11-07 10:58:25.662968 | f     |            |
+ 1242118 | 9788bf2d-694f-46ab-8da7-ac21140bd92a | Francis G+¬linas               | G+¬linas, Francis                    |                 |                  |                |               |                |              |    1 | 322  | 1      |                                     |             0 | 2015-06-10 03:56:55.418206 | f     |            |
+  541061 | 5b4484d2-ebd3-41c6-a57d-bb7e447c7d86 | -£-¦-¦-ü-+-+-+-+-+-¦-+ -P-ü-¦-¦-¦-+-ç -¿-é-¦-¦-+-¦-¦-Ç-¦ | Steinberg, Maximilian Osseyevich    | 1883            | 6                | 22             | 1946          | 12             | 6            |    1 | 176  | 1      | Maximilian Osseyevich Steinberg     |             0 | 2015-04-17 23:35:26.952461 | t     | 13235      | 2450
+  841323 | 85e87783-f4e6-4426-9358-24bf86c3f1c6 | tÖ+tÜçs¡ªTÖótöƒs+ÆS+ÜS+ëS¦¦s¿ÿ          | Hakuo Gakuen Seitokai Sannin Musume |                 |                  |                |               |                |              |    2 | 107  |        |                                     |             0 | 2013-05-05 06:00:08.383467 | f     |            |
+  752992 | 9ded1922-16ed-4f4a-8bc1-1c39154cad3e | Klas Lindquist                | Lindquist, Klas                     |                 |                  |                |               |                |              |    1 |      |        |                                     |             0 | 2010-10-12 11:51:17.536566 | f     |            |
+ 1386977 | d4e45070-dc49-4f85-a47b-f459152e3e38 | Hour Sundown                  | Hour Sundown                        |                 |                  |                |               |                |              |    2 | 3992 |        |                                     |             0 | 2016-07-06 16:38:46.743619 | f     |            |
+  971309 | 1cccd61f-2eae-40c9-9430-ce06962e32eb | Leonid Golcev                 | Golcev, Leonid                      |                 |                  |                |               |                |              |    1 | 126  | 1      |                                     |             0 | 2013-01-29 00:52:25.390078 | f     |            |
+(10 rows)
+
+dev=# select * from musicbrainz.artist_alias order by random() limit 10;
+   id   | artist  |                       name                        | locale | edits_pending |        last_updated        | type |                     sort_name                     | begin_date_year | begin_date_month | begin_date_day | end_date_year | end_date_month | end_date_day | primary_for_locale | ended
+--------+---------+---------------------------------------------------+--------+---------------+----------------------------+------+---------------------------------------------------+-----------------+------------------+----------------+---------------+----------------+--------------+--------------------+-------
+  81537 |  632010 | J.T. Hermes                                       |        |             0 | 2012-05-15 18:57:13.252186 |      | J.T. Hermes                                       |                 |                  |                |               |                |              | f                  | f
+ 138124 | 1044761 | µëïsíÜFªût¬Å                                          |        |             0 | 2013-09-29 07:00:24.460447 |      | Tezuka, Miho                                      |                 |                  |                |               |                |              | f                  | f
+ 143208 |  951139 | pâçpé¦pâ+pé¦pâ+pé¡pââpâë                                  | ja     |             0 | 2014-01-25 16:00:14.718794 | 1    | pâçpé¦pâ+pé¦pâ+pé¡pââpâë                                  |                 |                  |                |               |                |              | t                  | f
+  83294 |  641435 | Noriko Watanabe                                   |        |             0 | 2012-05-15 18:57:13.252186 |      | Noriko Watanabe                                   |                 |                  |                |               |                |              | f                  | f
+ 144214 | 1005960 | Tavia Ivey, Kenya Ivey, Ulisa Ivey                |        |             0 | 2014-02-18 02:00:44.238445 | 3    | Tavia Ivey, Kenya Ivey, Ulisa Ivey                |                 |                  |                |               |                |              | f                  | f
+  51004 |  238758 | Dann Galucci                                      |        |             0 | 2012-05-15 18:57:13.252186 |      | Dann Galucci                                      |                 |                  |                |               |                |              | f                  | f
+  28731 |  126361 | The Frosty Mountain Boys (with Raymond Fairchild) |        |             0 | 2012-05-15 18:57:13.252186 |      | The Frosty Mountain Boys (with Raymond Fairchild) |                 |                  |                |               |                |              | f                  | f
+ 114094 |  854908 | Rez Toledo                                        |        |             0 | 2012-05-15 18:57:13.252186 |      | Rez Toledo                                        |                 |                  |                |               |                |              | f                  | f
+ 191132 | 1369004 | Sivan                                             |        |             0 | 2017-03-04 23:30:59.140594 |      | Sivan                                             |                 |                  |                |               |                |              | f                  | f
+ 121637 |  850566 | Joseph S. Zinkan                                  |        |             0 | 2012-07-26 07:00:08.950188 | 2    | Zinkan, Joseph S.                                 |                 |                  |                |               |                |              | f                  | f
+(10 rows)
+
+dev=# select * from musicbrainz.artist_alias_type order by random() limit 10;
+ id |    name     | parent | child_order | description |                 gid
+----+-------------+--------+-------------+-------------+--------------------------------------
+  3 | Search hint |        |           0 |             | 1937e404-b981-3cb7-8151-4c86ebfc8d8e
+  2 | Legal name  |        |           0 |             | d4dcd0c0-b341-3612-a332-c0ce797b25cf
+  1 | Artist name |        |           0 |             | 894afba6-2816-3c24-8072-eadb66bd04bc
+(3 rows)
+
+dev=# select * from musicbrainz.artist_credit order by random() limit 10;
+   id    |                   name                   | artist_count | ref_count |          created
+---------+------------------------------------------+--------------+-----------+----------------------------
+ 1530298 | Joe Finch Trio                           |            1 |        16 | 2015-09-05 00:08:03.279438
+ 1439069 | GYM                                      |            1 |        24 | 2015-02-24 09:42:56.180959
+ 1579057 | Maria Hester Park                        |            1 |         2 | 2015-12-12 19:09:19.102001
+ 1635387 | Chris Brown feat. T.I.                   |            2 |         2 | 2016-03-30 17:03:06.977674
+  706902 | Paulo Vanzolini                          |            1 |        65 | 2011-05-16 16:32:11.963929
+ 1655347 | L.T. & Jhei                              |            1 |        24 | 2016-05-10 12:39:09.325175
+ 1003762 | Bing Crosby & Nat King Cole              |            2 |         4 | 2012-06-21 18:05:38.780948
+ 1854070 | Wreckshop Family feat. Big Moe & Ronetta |            3 |         1 | 2017-01-10 00:09:17.020539
+  904064 | Influx                                   |            1 |         2 | 2011-12-24 14:05:34.243979
+ 1478274 | Shostakovich; Sorrel Quartet             |            2 |        10 | 2015-05-19 17:01:47.806466
+(10 rows)
+
+dev=# select * from musicbrainz.artist_credit_name order by random() limit 10;
+ artist_credit | position | artist  |               name               | join_phrase
+---------------+----------+---------+----------------------------------+-------------
+        391946 |        0 |  391946 | Dark Crusade                     |
+       1603202 |        2 |  466631 | Swedish Radio Symphony Orchestra | ,
+        767290 |        0 |  767290 | Norlan                           |
+       1571789 |        0 | 1301020 | Karl Slavika                     |
+        362548 |        0 |  362548 | µûëFùñµ£¬tƒÑ                         |
+        737468 |        0 |  737468 | Jacks Wild                       |
+       1691735 |        0 | 1391392 | Fides                            |
+        955942 |        1 |  827542 | Bobby P                          |  feat.
+       1336800 |        0 | 1131957 | Bertas                           |
+       1407796 |        1 |  840477 | Ricardo Lopez Mendez             |
+(10 rows)
+
+dev=# select * from musicbrainz.artist_type order by random() limit 10;
+ id |   name    | parent | child_order | description |                 gid
+----+-----------+--------+-------------+-------------+--------------------------------------
+  4 | Character |        |           3 |             | 5c1375b0-f18d-3db7-a164-a49d7a63773f
+  6 | Choir     | 2      |           0 |             | 6124967d-7e3a-3eba-b642-c9a2ffb44d94
+  3 | Other     |        |          99 |             | ac897045-5043-3294-969b-187360e45d86
+  5 | Orchestra | 2      |           0 |             | a0b36c92-3eb1-3839-a4f9-4799823f54a5
+  1 | Person    |        |           1 |             | b6e035f4-3ce9-331c-97df-83397230b0df
+  2 | Group     |        |           2 |             | e431f5f6-b5d2-343d-8b36-72607fffb74b
+(6 rows)
+
+dev=# select * from musicbrainz.country_area order by random() limit 10;
+ are
+-----
+ 143
+  51
+ 220
+ 140
+  36
+ 136
+ 137
+  60
+ 201
+  56
+(10 rows)
+
+dev=# select * from musicbrainz.gender order by random() limit 10;
+ id |  name  | parent | child_order | description |                 gid
+----+--------+--------+-------------+-------------+--------------------------------------
+  3 | Other  |        |           3 |             | 081c0bf5-da60-37b0-95f8-2207a3f7f9d6
+  1 | Male   |        |           1 |             | 36d3d30a-839d-3eda-8cb3-29be4384e4a9
+  2 | Female |        |           2 |             | 93452b5a-a947-30c8-934f-6a4056b151c2
+(3 rows)
+
+dev=# select * from musicbrainz.label order by random() limit 10;
+   id   |                 gid                  |             name              | begin_date_year | begin_date_month | begin_date_day | end_date_year | end_date_month | end_date_day | label_code | type | area  | comment | edits_pending |        last_updated        | ended
+--------+--------------------------------------+-------------------------------+-----------------+------------------+----------------+---------------+----------------+--------------+------------+------+-------+---------+---------------+----------------------------+-------
+ 131432 | 6fdb6352-7d4a-4efc-892e-f24aab98de97 | fierce panda canada           |                 |                  |                |               |                |              |            |      |       |         |             0 | 2017-01-27 19:41:08.10917  | f
+ 119888 | 7f5a2f3b-4f52-4d67-89b2-1e7eeee210c8 | Sound of Charge               |                 |                  |                |               |                |              |            |      |    73 |         |             0 | 2016-05-29 21:34:44.971353 | f
+ 103170 | deb2e7f2-6ac3-4289-879e-c7c1e2e5e124 | Serene Chaos Records          | 2015            |                  |                |               |                |              |            |      | 98633 |         |             0 | 2015-05-06 12:17:13.264221 | f
+  14756 | 1a1de211-fd1d-4376-b80b-3af7ee654f38 | Bakery Music                  | 1994            |                  |                |               |                |              |            | 4    |   208 |         |             0 | 2013-07-18 02:05:44.02253  | f
+  48082 | d62d1745-475e-4a99-bdf7-4f1a20422349 | Horchposten Verlag            | 2004            |                  |                |               |                |              |            | 4    |    81 |         |             0 | 2010-10-31 12:04:54.745928 | f
+ 110119 | 58e85cea-c80a-48db-a95f-53141def0b34 | Gramcko                       |                 |                  |                |               |                |              |            | 4    |       |         |             0 | 2015-10-14 20:54:57.389175 | f
+  49858 | 040bab2d-68d9-4f3d-989c-aa8dd5fbe06f | Happy Birthday Records        |                 |                  |                |               |                |              |            | 4    |       |         |             0 | 2010-08-19 20:46:40.833073 | f
+  72172 | de6b6c3a-5a47-4abf-acd9-3eb7527caeba | Clay Davis Records            |                 |                  |                |               |                |              |            |      |       |         |             0 | 2012-10-19 23:20:14.49394  | f
+   4568 | c5d8188f-177f-4433-a0d2-bff4cc4f9204 | Academy Street Records        |                 |                  |                |               |                |              |            |      |   221 |         |             0 |                            | f
+  31721 | 2283a487-aa54-429c-8913-20504dd59574 | Classical Communications Ltd. |                 |                  |                |               |                |              |            |      |   221 |         |             0 | 2008-12-19 20:11:21.954471 | f
+(10 rows)
+
+dev=# select * from musicbrainz.label_type order by random() limit 10;
+ id |        name         | parent | child_order | description |                 gid
+----+---------------------+--------+-------------+-------------+--------------------------------------
+  8 | Rights Society      |        |           0 |             | 78ab2758-7809-372c-9b99-74b7ab87f390
+  1 | Distributor         |        |           0 |             | 53ab8dcc-9946-3b62-966e-7634d78e5034
+  5 | Bootleg Production  |      3 |           0 |             | fdac9b96-359b-3488-9322-ad99c2473636
+  3 | Production          |        |           0 |             | a2426aab-2dd4-339c-b47d-b4923a241678
+  7 | Publisher           |        |           0 |             | e9ad53b0-e3d0-3885-a10b-8193d501338c
+  9 | Imprint             |        |           0 |             | b6285b2a-3514-3d43-80df-fcf528824ded
+  4 | Original Production |      3 |           0 |             | 7aaa37fe-2def-3476-b359-80245850062d
+  2 | Holding             |        |           0 |             | 43f31a62-97e4-36f6-9752-453c131b71ed
+  6 | Reissue Production  |      3 |           0 |             | 88ee6ae7-f413-3490-a1d2-54f6a9f0838c
+(9 rows)
+
+dev=# select * from musicbrainz.medium order by random() limit 10;
+   id    | release | position | format |     name      | edits_pending |        last_updated        | track_count
+---------+---------+----------+--------+---------------+---------------+----------------------------+-------------
+ 1486320 | 1428386 |        1 |      1 |               |             0 | 2014-05-16 08:52:59.261709 |          12
+  962799 |  962799 |        1 |        |               |             0 | 2011-05-16 14:57:06.530063 |          15
+  872479 |  872479 |        1 |      1 |               |             0 | 2011-05-16 14:57:06.530063 |          15
+  331496 |  331496 |        1 |      1 |               |             0 | 2011-05-16 14:57:06.530063 |          10
+  296373 |  296373 |        1 |      1 |               |             0 | 2011-05-16 14:57:06.530063 |          14
+  565347 |  565347 |        1 |      1 |               |             0 | 2011-05-16 14:57:06.530063 |          12
+  453537 |  453537 |        1 |      1 |               |             0 | 2011-05-16 14:57:06.530063 |          16
+  411133 |  411133 |        1 |      1 |               |             0 | 2011-05-16 14:57:06.530063 |           3
+  426332 |  426330 |        3 |      1 | Baby Get Lost |             0 | 2011-05-16 14:57:06.530063 |          28
+ 1501650 | 1441410 |        1 |      1 |               |             0 | 2014-06-19 11:48:02.800366 |          13
+(10 rows)
+
+dev=# select * from musicbrainz.place order by random() limit 10;
+  id   |                 gid                  |            name             | type |                     address                     | area  |      coordinates      |                     comment                     | edits_pending |        last_updated        | begin_date_year | begin_date_month | begin_date_day | end_date_year | end_date_month | end_date_day | ended
+-------+--------------------------------------+-----------------------------+------+-------------------------------------------------+-------+-----------------------+-------------------------------------------------+---------------+----------------------------+-----------------+------------------+----------------+---------------+----------------+--------------+-------
+  7602 | 7040974d-dfff-4c6d-a621-58faf01e2ba7 | Jimmy's                     |    2 | 8200 Willow St., New Orleans, LA                | 12021 |                       |                                                 |             0 | 2014-10-05 05:35:05.269887 |                 |                  |                |               |                |              | f
+  6998 | f57565ec-0b4f-4f1d-a55c-265e1e8f7abe | Umbria Jazz                 |      |                                                 |  4681 |                       |                                                 |             0 | 2014-08-25 06:27:07.403202 |                 |                  |                |               |                |              | f
+  6446 | 7515fc11-3bee-4e96-adfa-b083b9d63b45 | Fyvie Hall                  |    2 | 309 Regent Street, London W1B 2HW               |  1178 | (51.516915,-0.142845) |                                                 |             0 | 2014-07-20 10:38:24.948187 |                 |                  |                |               |                |              | f
+ 22271 | 2b7bf44c-15d7-4bc0-837f-ea56e5c65b97 | Tonstudio Schellerten       |    1 |                                                 |       |                       |                                                 |             0 | 2016-11-02 15:37:35.566312 |                 |                  |                |               |                |              | f
+  2057 | 4749613a-8f58-473a-a493-ff2b37078462 | H+ñmeenlinnan Raatihuone     |    3 | Raatihuoneenkatu 15, 13100 H+ñmeenlinna, Finland |  9598 | (60.99603,24.46564)   |                                                 |             0 | 2013-11-04 05:32:23.282624 |                 |                  |                |               |                |              | f
+ 23822 | 6d8dd783-0b3f-4b3f-ae1e-9715a26234a3 | TV4 Studios                 |    1 | Stockholm, Sweden                               |  5114 |                       |                                                 |             0 | 2017-01-01 16:30:13.221901 |                 |                  |                |               |                |              | f
+ 21596 | 31671b99-9399-4112-bf3e-09f3010a3db7 | Planet Studios              |    1 |                                                 |  3917 |                       | Coventry, UK                                    |             0 | 2016-09-27 18:06:01.446461 |                 |                  |                |               |                |              | f
+ 10982 | 8afe9db1-c55c-4590-9890-d5bfb516d659 | National Stadium, Singapore |    4 |                                                 |   188 | (1.304278,103.874611) | aka Kallang Stadium, 1973GÇô2007, demolished 2010 |             0 | 2015-05-06 09:01:10.364798 | 1973            | 7                |                | 2007          | 6              | 30           | t
+  2148 | 8d3be72d-2c38-4331-8b21-889a1811d226 | Studenterhuset              |    2 | K++bmagergade 52, 1150 K++benhavn K               |  7712 | (55.681192,12.576282) |                                                 |             0 | 2013-11-04 00:09:29.528226 | 1984            |                  |                |               |                |              | f
+  3084 | c34974ee-a884-43ec-a2de-ecbf0b6b7643 | Tivoli                      |    3 | Vesterbrogade 3, 1630 K++benhavn V               |  7712 | (55.67373,12.56833)   | Danish amusement park                           |             0 | 2013-11-30 21:40:14.999899 | 1843            | 8                | 15             |               |                |              | f
+(10 rows)
+
+dev=# select * from musicbrainz.place_alias order by random() limit 10;
+  id  | place |                      name                       | locale | edits_pending |        last_updated        | type |                    sort_name                    | begin_date_year | begin_date_month | begin_date_day | end_date_year | end_date_month | end_date_day | primary_for_locale | ended
+------+-------+-------------------------------------------------+--------+---------------+----------------------------+------+-------------------------------------------------+-----------------+------------------+----------------+---------------+----------------+--------------+--------------------+-------
+ 2851 | 13916 | Top Recording Studio                            |        |             0 | 2015-10-27 05:37:00.609465 |    1 | Top Recording Studio                            |                 |                  |                |               |                |              | f                  | f
+ 2037 |  9078 | Yokohama Minato Mirai Hall                      | en     |             0 | 2015-01-01 04:54:32.425755 |    1 | Yokohama Minato Mirai Hall                      |                 |                  |                |               |                |              | t                  | f
+  396 |  1376 | Weston Church                                   | en     |             0 | 2013-10-23 17:33:13.12113  |    1 | Weston Church                                   |                 |                  |                |               |                |              | f                  | f
+ 1850 |  8166 | MPR Recording Studio                            |        |             0 | 2014-11-17 22:29:14.864796 |    1 | MPR Recording Studio                            |                 |                  |                |               |                |              | f                  | f
+ 3961 | 21122 | CBP                                             |        |             0 | 2016-09-06 15:44:36.51799  |    2 | CBP                                             |                 |                  |                |               |                |              | f                  | f
+ 3845 | 20810 | Queensland Conservatorium of Music              | en     |             0 | 2016-08-22 07:59:18.84145  |    1 | Queensland Conservatorium of Music              |                 |                  |                |               |                |              | f                  | t
+ 4013 |  2275 | Grand Hall of the Saint Petersburg Philharmonic |        |             0 | 2016-10-02 11:20:52.832944 |    2 | Grand Hall of the Saint Petersburg Philharmonic |                 |                  |                |               |                |              | f                  | f
+   93 |   837 | Zepp Osaka                                      | ja     |             0 | 2013-10-17 15:50:12.920962 |    1 | pé+pââpâùpé¬pé¬pé¦pé½                                  |                 |                  |                |               |                |              | t                  | f
+ 2489 | 12444 | Boston Conservatorium                           | nl     |             0 | 2015-07-26 15:10:12.72633  |    1 | Boston Conservatorium                           |                 |                  |                |               |                |              | t                  | f
+  392 |   964 | Olympia                                         |        |             0 | 2013-10-25 08:00:20.500302 |      | Olympia                                         |                 |                  |                |               |                |              | f                  | f
+(10 rows)
+
+
+dev=# select * from musicbrainz.place_alias_type order by random() limit 10;
+ id |    name     | parent | child_order | description |                 gid
+----+-------------+--------+-------------+-------------+--------------------------------------
+  1 | Place name  |        |           0 |             | fb68f9a2-622c-319b-83b0-bbff4127cdc5
+  2 | Search hint |        |           0 |             | 0a438b9c-1850-32de-b4bb-7f58f5048ea3
+(2 rows)
+
+dev=# select * from musicbrainz.place_type order by random() limit 10;
+ id |        name        | parent | child_order |                                                                                            description                                                                                            |                 gid
+----+--------------------+--------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------
+  6 | Religious building |        |           5 | A place that has worship or religious studies as its main function. Religious buildings often host concerts and serve as recording locations, especially for classical music.                     | a120ca4a-69e9-3c0e-bc09-21cae26eb621
+  5 | Indoor arena       |        |           4 | A place consisting of a large enclosed area with a central event space surrounded by tiered seating for spectators, which can be used for indoor sports, concerts and other entertainment events. | a77c11f6-82fa-3cc0-9041-ac60e5f6e024
+  3 | Other              |        |          99 |                                                                                                                                                                                                   | a0df5ead-0bd6-33d8-8444-855a9f3e9970
+  2 | Venue              |        |           2 | A place that has live artistic performances as one of its primary functions, such as a concert hall.                                                                                              | cd92781a-a73f-30e8-a430-55d7521338db
+  4 | Stadium            |        |           3 | A place whose main purpose is to host outdoor sport events, typically consisting of a pitch surrounded by a structure for spectators with no roof, or a roof which can be retracted.              | 62664fbd-cd55-3b5f-a5ea-fb5d1bc0113c
+  1 | Studio             |        |           1 | A place designed for non-live production of music, typically a recording studio.                                                                                                                  | 05fa6a09-ff92-3d34-bdbb-5141d3c24f38
+(6 rows)
+
+dev=# select * from musicbrainz.recording order by random() limit 10;
+    id    |                 gid                  |                                                  name                                                  | artist_credit | length | comment | edits_pending |        last_updated        | video
+----------+--------------------------------------+--------------------------------------------------------------------------------------------------------+---------------+--------+---------+---------------+----------------------------+-------
+ 18604756 | 85469646-5a55-4805-94b1-349d66ee846c | The American Farmer (Elwood)                                                                           |          7464 | 252000 |         |             0 | 2015-12-08 07:44:31.573861 | f
+ 14584120 | 2a2875af-79ce-4576-85ad-1236e0d67dea | The Hymn                                                                                               |       1126578 | 396504 |         |             0 | 2013-02-12 10:55:33.922866 | f
+ 18143671 | 8415abb3-dea1-4a27-bf48-ee966110798b | Twelve's The New Eight                                                                                 |       1523046 | 217046 |         |             0 | 2015-08-18 12:31:46.413812 | f
+ 12844566 | 219e7c37-a108-42ed-b404-9fd65352e530 | Precious Cargo                                                                                         |        871079 | 250000 |         |             0 | 2015-10-10 14:02:02.551276 | f
+  8097280 | 9f4183d6-9a37-4600-985e-a9f10de00e25 | Twelve Over the Eight                                                                                  |        494684 | 140000 |         |             0 | 2014-04-18 15:40:17.385594 | f
+ 14659294 | e0abcfb2-cf3c-416a-823a-c773d16761b8 | Le bestiaire: Le dromadaire / La ch+¿vre du Tibet / La sauterelle / Le dauphin / L'+¬crevisse / La carpe |       1605991 | 282000 |         |             0 | 2016-02-10 23:00:29.27671  | f
+ 13721977 | a3a58d83-1085-47da-a1b0-2a77b8d40960 | The Rhythm of the Night (club mix)                                                                     |           685 | 331000 |         |             0 | 2012-06-30 03:34:32.14495  | f
+ 10640624 | c93ef7f1-9457-42cb-9289-318ccfb38ce3 | Volatile State                                                                                         |         71057 | 504986 |         |             0 |                            | f
+ 15522960 | aa9fc864-0e2c-4da3-9a09-b3b7e6c27092 | Typecast (version 2)                                                                                   |        955270 | 217000 |         |             0 | 2013-12-03 18:53:14.790774 | f
+  9247438 | f239b4e4-b8c5-4782-b893-f46f9f9bfd67 | Transit on the Wind                                                                                    |       1027133 | 226000 |         |             0 | 2012-07-31 22:00:12.751103 | f
+(10 rows)
+
+dev=# select * from musicbrainz.release order by random() limit 10;
+   id    |                 gid                  |               name                | artist_credit | release_group | status | packaging | language | script |    barcode    | comment | edits_pending | quality |        last_updated
+---------+--------------------------------------+-----------------------------------+---------------+---------------+--------+-----------+----------+--------+---------------+---------+---------------+---------+----------------------------
+   72329 | 3e2d07a5-f79b-4565-abfb-a341f8de9ce5 | Heaven's Garden                   |         90086 |        429441 |      1 |           |      120 |     28 | 6420074101122 |         |             0 | -1      | 2013-11-12 10:44:09.327335
+ 1100676 | 762db317-ce0c-4313-bf01-d1df270a425e | The Best of Uriah Heep            |          3528 |       1116266 |      1 |           |      120 |     28 | 6009143423336 |         |             0 | -1      | 2013-03-09 23:25:12.008939
+  689255 | 2767f850-fad6-473a-8bb8-f2bbae87c842 | Dekadent Aesthetix                |        710434 |        954452 |      1 |           |      351 |     28 |               |         |             0 | -1      | 2014-11-19 12:06:05.02714
+ 1834538 | 0a8e6a4b-3dc4-4527-809a-6348f2707fb4 | Shepherds & Angels                |        793036 |       1233629 |      1 |         7 |      120 |     28 |               |         |             0 | -1      | 2016-09-30 09:00:33.423904
+ 1300840 | 0b145c9b-9fb2-4561-8553-17d989c9ad58 | Kissing Sally in the Smoking Room |       1179824 |       1277307 |      1 |         7 |      120 |     28 |               |         |             0 | -1      | 2013-06-24 07:00:14.384939
+  173913 | 2b7b6610-7209-4f5f-85bc-e108f6a87fb5 | Stella One Eleven                 |        122035 |        214370 |      1 |           |      120 |     28 | 9324690009923 |         |             0 | -1      | 2010-11-10 03:50:36.161146
+  494718 | b40daa17-c457-49ed-b1de-16a1a182b5e9 | No Matter What                    |          2858 |        351107 |      1 |           |      120 |     28 | 731456782324  |         |             0 | -1      | 2014-03-23 14:00:15.986413
+ 1447333 | 4c558f30-c99d-4559-9a2f-080f5324cf9f | All the Best                      |          1616 |        282579 |      1 |         1 |      120 |     28 | 6009509313585 |         |             0 | -1      | 2015-11-17 21:20:18.90316
+ 1813978 | fd5f2e18-ed58-4b6b-93ef-73b2f17acce7 | Apotheosis Pulsio CLVI            |       1701427 |       1688784 |      1 |           |          |        |               |         |             0 | -1      | 2016-08-18 09:00:23.108548
+ 1907156 | 48c90566-3545-4c5a-895e-db3260bcb995 | SEACATS                           |        744297 |       1760155 |      1 |        12 |      120 |     28 |               |         |             0 | -1      | 2017-01-31 19:24:21.945956
+(10 rows)
+
+dev=# select * from musicbrainz.release_country order by random() limit 10;
+ release | country | date_year | date_month | date_day
+---------+---------+-----------+------------+----------
+ 1673997 |     193 |      1999 |            |
+ 1209622 |      67 |      2011 |          5 |       25
+  710188 |      81 |           |            |
+ 1672399 |     222 |      2003 |          7 |        5
+  435099 |     222 |      2008 |            |
+ 1124352 |      73 |      2011 |          9 |       25
+  730891 |     221 |      1998 |            |
+  814840 |     222 |      2009 |          6 |       19
+  223411 |      81 |      2006 |            |
+ 1714271 |     221 |      2016 |          1 |       10
+(10 rows)
+
+dev=# select * from musicbrainz.release_label order by random() limit 10;
+   id    | release | label  |  catalog_number   |        last_updated
+---------+---------+--------+-------------------+----------------------------
+  848673 | 1314718 |  58424 | SFT024            | 2013-07-31 19:29:52.966486
+  326544 |  475794 |  62793 | 12 EMI 5380       | 2013-08-19 21:00:49.161577
+ 1392503 | 1868981 |  89409 | CDLREC 5872011 CD | 2016-12-01 13:36:08.066235
+ 1179636 | 1650113 |  88740 |                   | 2015-08-24 15:12:49.585927
+ 1032871 | 1500219 |        | MSLP-010          | 2014-09-23 16:32:25.352957
+ 1311007 | 1786698 |   5126 | TER 1036          | 2016-06-08 10:46:04.340481
+ 1395221 | 1871778 | 124205 | CROW005           | 2016-12-06 08:15:58.581051
+  473900 |  714285 |        | 259 388           | 2015-03-13 01:27:37.148362
+  970900 | 1436395 |   1018 |                   | 2014-06-04 17:18:17.92267
+ 1125706 | 1594994 | 102524 |                   | 2015-04-16 18:56:01.779679
+(10 rows)
+
+dev=# select * from musicbrainz.track order by random() limit 10;
+    id    |                 gid                  | recording | medium  | position | number |                                 name                                 | artist_credit | length | edits_pending |        last_updated        | is_data_track
+----------+--------------------------------------+-----------+---------+----------+--------+----------------------------------------------------------------------+---------------+--------+---------------+----------------------------+---------------
+ 20292353 | 018be850-3681-4f6d-9e45-f5afc1598864 |  18973857 | 1843469 |        7 | 7      | You'll Never Know                                                    |       1555248 | 237000 |             0 | 2016-03-01 19:08:31.599056 | f
+  9420966 | 5e1cf411-3571-307b-9805-e5a682903c18 |  10901836 |  685934 |       10 | 10     | Brandenburg Concerto No. 4 in G, BWV 1049: II. Andante               |          2327 | 220000 |             0 | 2011-05-16 16:08:20.288158 | f
+ 16692256 | 6ac192a8-7053-47cd-b224-f12c06578ce3 |  16281988 | 1498730 |        4 | 4      | Keep It Moving                                                       |         79831 | 265000 |             0 | 2014-06-25 11:00:20.39856  | f
+ 13713682 | 8348d7e0-b832-3290-b96f-1ca1d1cdac9c |  14261071 | 1254558 |        8 | 8      | Feels So Good                                                        |          5427 | 288000 |             0 | 2012-12-02 16:55:00.795856 | f
+ 20057515 | acb0e90c-f1f3-405c-af74-0446e28f2a5a |   7785207 | 1821244 |        8 | 8      | Sei Lob und Ehr' dem h+¦chsten Gut BWV 117 - VIII Recitativo (Tenore) |          2327 |  47000 |             0 | 2016-10-24 11:01:07.04688  | f
+  5968167 | f8a153b7-be54-361c-b7a1-579e534a2902 |   7189216 |  296992 |       11 | 11     | K+¬rozen (feat. Rap'as, Kill Foster, Sofiane & Kara (Sale Equipe))    |        459427 | 368000 |             0 | 2011-05-16 16:08:20.288158 | f
+ 21446797 | 0e6caf4c-6725-4812-983d-e0f8ddc51661 |  19076175 | 1956187 |        4 | 4      | Intention                                                            |       1630747 | 230000 |             0 | 2016-09-30 00:58:05.889767 | f
+  2049513 | 915d63ba-b81f-367e-9406-0b806729dc63 |   2443833 |  110971 |        3 | 3      | The Prisoner                                                         |        154555 | 387613 |             0 | 2011-05-16 16:08:20.288158 | f
+ 10430101 | 40e9051b-5ab0-3cd4-bfaf-53062b793868 |  12006265 |  791686 |        8 | 8      | No Bones                                                             |        183950 |        |             0 | 2011-05-16 16:08:20.288158 | f
+ 16877137 | 8996a22d-6e17-44d9-a977-a315862d4e33 |  16418371 | 1516438 |        2 | B1     | Oprosti ljubavi                                                      |        276955 | 233355 |             0 | 2014-07-21 19:07:08.68919  | f
+(10 rows)
